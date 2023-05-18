@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="CustomerStyle.css">
+    </head>
+    <body>
+    <div class="topbar">
+        <a href="index.php"><img style="margin-left: 1%;" src="images/Screenshot_2023-03-10_204130-removebg-preview (4).png" width="230px" alt=""></a> 
+    </div>
+    <div class="topbar2">
+        <a class="login2 pad" href="Login.php">Login</a>
+        <a class="login2 pad" href="Products.html">Products</a>
+        <a class="login2 pad" href="About us.html">About Us</a> 
+        <a class="login2 pad" href="Branches.html">Branches</a> 
+        
+        
+   </div>
+   <div class="formm">
+   <form>
+    <div class="title">Welcome</div>
+    <h2>Please Feel free to Contact Us</h2>
+    <br>
+    <label for="firtname">First Name:</label>
+    <br>
+    <input type="text" id="first" name="firstname">
+    <br>
+  
+    <br><br>
+    <label for="lastname">Last Name:</label>
+    <br>
+    
+    <input type="text" id="last" name="lastname">
+    <br>
+    
+    
+    <br><br>
+    <label for="email">Email:</label>
+    <br>
+    <input type="text" id="email" name="email">
+    <br>
+    
+    
+    <br><br>
+    <label for="phonenumber">Phone number:</label>
+    
+    <br>
+    <input type="number" id="phone" name="phonenumber">
+    <br>
+    <br><br>
+    
+    <label for="Address">Address:</label>
+    <br>
+    <input type="text" id="Address" name="Address">
+    <br><br>
+    <div class="form-group">
+        <label style="color: white;" for="sel1">Complain Type</label>
+        <select class="form-control SelectComp" id="sel1">
+          <option>Wrong Products</option>
+          <option>Late on Delivery</option>
+          <option>Others</option>
+          
+        </select>
+        </div>
+        <div class="form-group">
+            <label style="color: white ; " for="sel1">Order Type</label>
+            <select class="form-control SelectComp"  id="sel1">
+              <option>Home Delivery</option>
+              <option>Pick-Up</option>
+            </select>
+            </div>
+
+            <label for="Message">Message:</label>
+            <br>
+            <input type="text" id="Message" name="Message" class="MsgBox">
+            <br><br>
+    <br>
+    <input type="submit" class="submitt" value="Submit" onclick=" return ValidateInput()">
+  </form>
+</div>
+
+<script src="SignUp.js"></script>
+
+<br><br><br>
+
+
+ </body>
+</html>

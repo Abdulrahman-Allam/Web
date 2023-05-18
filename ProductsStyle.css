@@ -1,0 +1,224 @@
+::-webkit-scrollbar 
+         {
+           width: 10px;
+         }
+         ::-webkit-scrollbar-track 
+         {
+           background: darkgrey; 
+           border-radius: 10px;
+         }
+
+         ::-webkit-scrollbar-thumb 
+         {
+           background: black; 
+           border-radius: 10px;
+         }
+         ::-webkit-scrollbar-thumb:hover 
+         {
+           background: #555; 
+         }
+            div.fixed
+            {
+             
+              top: 0;
+              left: 0;
+              height: 100%;
+              width: 98%;
+              background-color:darkgray;
+              border-radius: 20px;
+              margin-left: 1%; margin-top: 2%;
+              
+            }
+
+            body
+            {
+                background: #959595; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+            }
+
+
+            .container{
+                
+     width: 100%;
+     position: relative;
+    white-space: nowrap;
+     justify-content: space-between;
+     overflow: auto;
+ }
+ 
+ .container .card{
+    display:inline-block;
+    white-space:normal;
+    margin-top: 0%;
+    margin-left: 5%;
+    margin-bottom: 0%;
+     position: relative;
+     cursor: pointer;
+ }
+ 
+ .container .card .face{
+     width: 450px;
+     height: 300px;
+     transition: 0.5s;
+ }
+ 
+ .container .card .face.face1{
+    border-radius: 20px;
+     position: relative;
+     background:white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 1;
+     transform: translateY(100px);
+ }
+ 
+ .container .card:hover .face.face1{
+     transform: translateY(0);
+ }
+ 
+ .container .card .face.face1 .content{
+    
+     opacity: 1;
+     transition: 0.5s;
+ }
+ 
+ .container .card:hover .face.face1 .content{
+    
+     opacity: 1;
+ }
+ 
+ .container .card .face.face1 .content img{
+     width: 400px;
+     height: 250px;
+ }
+ 
+ .container .card .face.face1 .content h3{
+     margin: 10px 0 0;
+     padding: 0;
+     color: rgb(30,33,37);
+     text-align: center;
+     font-size: 1.5em;
+ }
+ 
+ .container .card .face.face2{
+    border-radius: 20px;
+     position: relative;
+     background:  rgb(30,33,37);
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+     box-sizing: border-box;
+     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+     transform: translateY(-100px);
+ }
+ 
+ .container .card:hover .face.face2{
+     transform: translateY(0);
+ }
+ 
+ .container .card .face.face2 .content p{
+    color: white;
+     
+    margin-top: 0%;
+    margin-bottom: 0%;
+     padding: 0;
+ }
+ 
+ .container .card .face.face2 .content a{
+     margin: 15px 0 0;
+     display:  inline-block;
+     text-decoration: none;
+     font-weight: 900;
+     color: white;
+     padding: 5px;
+     background-color: black;
+     border-radius: 20px;
+     border: 1px solid #333;
+ }
+ 
+ .container .card .face.face2 .content a:hover{
+     background: #333;
+     color: #fff;
+ }
+h3
+{
+   text-align: center;
+   font-size: 33px;
+   color: white;
+   
+}
+div.h6
+{
+    
+    margin: 2% 3% 0% 3%;
+    font-size:80px ;
+    color: rgb(30,33,37);
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p
+{
+    font-size: 25px;
+}
+.size
+{
+    font-size: 30px;
+    color: rgb(170,18,27);
+}
+
+.topbar2
+{
+     position: absolute;top: 1%;left: 40%;
+     font-size: 35px;
+     border-radius: 25px;
+   
+}
+
+a:visited
+{
+    color: white;
+}
+a
+{
+  color: white;
+  text-decoration: none;
+}
+a.login:visited
+{
+     color: white;
+}
+a.login
+{
+text-decoration: none;
+}
+a.login2
+{
+text-decoration: none;
+
+}
+a.login2:visited
+{
+     color: white;
+}
+.pad
+{
+    background-color: black;
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.5s;
+    
+}
+.pad:hover
+{
+    padding: 50px;
+}
+.borderrad
+{
+    border-radius: 10px;
+}

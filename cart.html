@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart</title>
+    <link rel="stylesheet" href="cartstyle.css">
+  </head>
+  <body>
+    <h1>Cart</h1>
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total cost</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    
+
+    <footer>
+        <table>
+          <tfoot>
+            <tr>
+              <td colspan="3">Total cost:</td>
+              <td id="total-cost"></td>
+            </tr>
+          </tfoot>
+        </table>
+        <div>
+          <label for="promo-code">Promo code:</label>
+          <input type="text" id="promo-code">
+          <button id="apply-promo">Apply</button>
+          <br><br>
+          <span id="discounted-cost"></span><br>
+          <button id="clear-cart">Clear cart</button>
+          <button id="checkout">Checkout</button>
+          <a href="Products.html">Continue Shopping</a>
+        </div>
+      </footer>
+  </body>
+  <script>
+    // Retrieve the saved cart items from localStorage
+    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Get the table body element
+    const tableBody = document.querySelector('#cart-table tbody');
+    
+    // Loop through the cart items and create a table row for each item
+    cartItems.forEach((item, index) => {
+    // Create a new table row
+    const row = document.createElement('tr');
+    
+    // Create a table data cell for the image
+    const imageCell = document.createElement('td');
+    const image = document.createElement('img');
+    image.src = item.image;
+    image.style.width = '50px'; // adjust the size as needed
+    image.style.height = '50px';
+    imageCell.appendChild(image);
+    row.appendChild(imageCell);
+    
+    // Create a table data cell for the product name
+    const nameCell = document.createElement('td');
+    nameCell.textContent = item.name;
+    row.appendChild(nameCell);
+    
+    // Create a table data cell for the product price
+    const priceCell = document.createElement('td');
+    priceCell.textContent = item.price;
+    row.appendChild(priceCell);
+    
+    
+    
+    // Create a table data cell for the product quantity
+    const quantityCell = document.createElement('td');
+    quantityCell.textContent = item.quantity;
+    row.appendChild(quantityCell);
+    
+    // Create a table data cell for the total price
+    const totalCell = document.createElement('td');
+    totalCell.textContent = '$' + (item.price * item.quantity).toFixed(2);
+    row.appendChild(totalCell);
+    
+    // Create a table data cell for the remove button
+    const removeCell = document.createElement('td');
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove';
+    removeButton.addEventListener('click', () => {
+    // Remove the item from the cart items array
+    cartItems.splice(index, 1);
+    
+    // Save the updated cart items back to localStorage
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    
+    // Remove the row from the table
+    row.remove();
+    });
+    removeCell.appendChild(removeButton);
+    row.appendChild(removeCell);
+    
+    // Add the new row to the table body
+    tableBody.appendChild(row);
+    });
+    
+    
+   // Define the getTotalCost() function to calculate the total cost of the cart items
+function getTotalCost() {
+  let totalCost = 0;
+  cartItems.forEach(item => {
+    totalCost += item.price * item.quantity;
+  });
+  return totalCost;
+}
+
+// Get references to the promo code input, apply button, total cost cell, and checkout button
+const promoInput = document.getElementById('promo-code');
+const applyButton = document.getElementById('apply-promo');
+const totalCostCell = document.getElementById('total-cost');
+const discountedCostSpan = document.getElementById('discounted-cost');
+const checkoutButton = document.getElementById('checkout');
+let clearCartButton = document.getElementById('clear-cart');
+
+// Add an event listener to the apply button to apply the promo code
+applyButton.addEventListener('click', () => {
+  const promoCode = promoInput.value.trim();
+  const generatedPromoCode = getCookie('promoCode');
+    console.log(generatedPromoCode);
+  if (promoCode === generatedPromoCode) {
+    const totalCost = getTotalCost();
+    const discount = totalCost * 0.1;
+    const discountedCost = totalCost - discount;
+    discountedCostSpan.textContent = 'Discounted cost: $' + discountedCost.toFixed(2);
+    promoInput.value = '';
+  } else {
+    alert('Invalid promo code');
+  }
+});
+
+// Define a function to retrieve a cookie by name
+function getCookie(name) {
+  const cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].trim();
+    if (cookie.startsWith(name + '=')) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+
+// Add an event listener to the clear cart button to clear the cart
+clearCartButton.addEventListener('click', () => {
+    console.log('Clear cart button clicked');
+
+  // Remove all items from the cartItems array
+  cartItems.splice(0, cartItems.length);
+
+
+ // Remove the cart table rows
+ const cartTableBody = document.getElementById('cart-table-body');
+  if (cartTableBody !== null) {
+    while (cartTableBody.firstChild) {
+      cartTableBody.removeChild(cartTableBody.firstChild);
+    }
+  }
+
+  // Update the total cost cell
+  totalCostCell.textContent = '$0.00';
+  
+});
+// Update the total cost cell initially
+totalCostCell.textContent = '$' + getTotalCost().toFixed(2);  
+</script>
+</html>

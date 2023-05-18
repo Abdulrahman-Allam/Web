@@ -1,0 +1,98 @@
+body
+{
+  background: #959595; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+
+div.fixed
+            {
+              
+              top: 0;
+              left: 0;
+              height: 100%;
+              width: 98%;
+              background-color:grey;
+              border-radius: 20px;
+              margin-left: 1%; margin-top: 2%;
+              
+            }
+            h1
+            {
+                margin: 2% 3% 0% 3%;
+                font-size:80px ;
+                color: rgb(30,33,37);
+                display: flex;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .txt
+            {
+                color: rgb(30,33,37);
+                font-size: 17px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            ::-webkit-scrollbar 
+            {
+              width: 10px;
+            }
+            ::-webkit-scrollbar-track 
+            {
+              background: darkgrey; 
+              border-radius: 10px;
+            }
+   
+            ::-webkit-scrollbar-thumb 
+            {
+              background: black; 
+              border-radius: 10px;
+            }
+            ::-webkit-scrollbar-thumb:hover 
+            {
+              background: #555; 
+            }
+         .topbar2
+{
+     position: absolute;top: 1%;left: 40%;
+     font-size: 35px;
+     
+     border-radius: 25px;
+   
+}
+a.login:visited
+{
+     color: white;
+}
+a.login
+{
+text-decoration: none;
+}
+a.login2
+{
+text-decoration: none;
+
+}
+a.login2:visited
+{
+     color: white;
+}
+.pad
+{
+    background-color: black;
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.5s;
+    
+}
+.pad:hover
+{
+    padding: 50px;
+}
+.aboutphotos
+{
+  margin-left: 3%;
+  word-spacing:50px ;
+}

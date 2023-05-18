@@ -1,0 +1,77 @@
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  thead {
+    background-color: #f2f2f2;
+  }
+  
+  th {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  td {
+    padding: 10px;
+  }
+  
+ 
+  a {
+    display: block;
+    width: 100px;
+    margin: 20px auto;
+    text-align: center;
+    text-decoration: none;
+    background-color: #0071c5;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  a:hover {
+    background-color: #005c9e;
+  }
+  
+  
+  button {
+    background-color: gray;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #c82333;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-left: 0;
+    text-align: left;
+  }
+  
+  tfoot td {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  tfoot #total-cost {
+    text-align: center;
+  }
